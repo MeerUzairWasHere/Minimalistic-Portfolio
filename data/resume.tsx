@@ -100,7 +100,7 @@ export const DATA = {
          badges: ["Full-Time"],
          location: 'Hybrid',
          title: 'Quality Engineer',
-         logoUrl: '/me.png',
+         logoUrl: '/bqe.png',
          start: 'June 2024',
          end: 'Present',
          description:
@@ -112,7 +112,7 @@ export const DATA = {
          badges: ["Freelancing"],
          location: 'On-Site',
          title: 'Full-Stack Developer',
-         logoUrl: '/me.png',
+         logoUrl: '/squadtech.png',
          start: 'Jan 2024',
          end: 'Jun 2024',
          description:
@@ -124,7 +124,7 @@ export const DATA = {
          badges: ["Internship"],
          location: 'On-Site',
          title: 'Frontend Developer',
-         logoUrl: '/me.png',
+         logoUrl: '/nits.jpeg',
          start: 'Jul 2023',
          end: 'Jan 2024',
          description:
@@ -137,7 +137,7 @@ export const DATA = {
          href: 'https://kashmiruniversity.net/',
          degree: 'Bachelors of Computer Applications',
          start: '2012',
-         logoUrl:"/me.png",
+         logoUrl:"/ku.png",
          end: '2023',
       },
    ],
