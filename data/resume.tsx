@@ -101,7 +101,7 @@ export const DATA = {
          location: 'Hybrid',
          title: 'Quality Engineer',
          logoUrl: '/bqe.png',
-         start: 'June 2024',
+         start: 'Jun 2024',
          end: 'Present',
          description:
         'Conduct detailed inspections and tests on products to ensure compliance with quality standards. Implement quality control processes to enhance reliability. Analyze data to identify defects and improvement areas. Collaborate with cross-functional teams to resolve quality issues, drive improvements, and maintain documentation to support compliance and traceability.',
