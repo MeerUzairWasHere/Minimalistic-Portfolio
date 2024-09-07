@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Markdown from 'react-markdown'
-import { HackCard } from '../components/hack-card'
 import BlurFade from '../components/ui/blur-fade'
 import BlurFadeText from '../components/ui/blur-fade-text'
 import { ProjectCard } from '../components/project-card'
