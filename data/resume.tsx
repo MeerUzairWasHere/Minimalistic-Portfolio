@@ -161,7 +161,7 @@ export const DATA = {
             {
                type: 'Website',
                href: 'https://meeruzairwashere-portfolio.vercel.app/',
-               icon: <Icons.smile className="size-3" />,
+               icon: <Icons.globe className="size-3" />,
             },
             {
                type: 'Source',
