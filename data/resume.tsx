@@ -237,6 +237,23 @@ export const DATA = {
          image: '',
          video: '/project-3.mp4',
       },
-       
+      {
+         title: 'More Projects',
+         href: 'https://meeruzairwashere.online/projects',
+         dates: '',
+         active: true,
+         description:
+        'Explore many more projects here.',
+         technologies: [],
+         links: [
+            {
+               type: 'Website',
+               href: 'https://meeruzairwashere.online/projects',
+               icon: <Icons.globe className="size-3" />,
+            },
+         ],
+         image: '',
+         video: 'project-4.mp4',
+      },
    ],
 } as const

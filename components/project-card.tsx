@@ -45,6 +45,7 @@ export function ProjectCard({
          className="flex h-full flex-col overflow-hidden border transition-all duration-300 ease-out hover:shadow-lg"
       >
          <Link
+            target='_blank'
             href={href || '#'}
             className={ny('block cursor-pointer', className)}
          >
