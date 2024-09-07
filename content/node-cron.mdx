@@ -1,0 +1,68 @@
+---
+title: "Keeping Your Free Render.com Projects Alive with Node-Cron and Axios"
+publishedAt: "2024-06-27"
+---
+
+If you're using [Render.com](http://Render.com) to host your hobby projects on the free tier, you might have noticed that your instance goes to sleep after 15 minutes of inactivity. This can be frustrating if you want your projects to be readily accessible without the initial delay of waking up the server. Luckily, there's a simple way to keep your server awake using a health check endpoint and a scheduled job. Here’s how you can do it!
+
+### Step-by-Step Guide
+
+### 1\. Install Required Packages
+
+First, you need to install `node-cron` and `axios`. These packages will help you schedule the health check requests and make HTTP requests respectively.
+
+```bash
+npm install node-cron axios
+```
+
+### 2\. Set Up Your Health Check Route
+
+Create a route in your Express application that responds with a simple message indicating the server is running. This route will be hit periodically to keep the server awake.
+
+```javascript
+app.get("/api/v1/health", (req, res) => {
+  res.status(200).json({ msg: "Server is running!" });
+});
+```
+
+### 3\. Schedule Health Check Requests
+
+Use `node-cron` to schedule an HTTP request to your health check endpoint every 14 minutes. This will ensure that your server stays awake, as the maximum idle time allowed is 15 minutes.
+
+```javascript
+import cron from "node-cron";
+import axios from "axios";
+
+// Schedule health check
+cron.schedule('*/14 * * * *', async () => {
+  try {
+    const response = await axios.get('https://yourdomain.com/api/v1/health');
+    console.log(`Health check successful: ${response.data.msg}`);
+  } catch (error) {
+    console.error(`Health check failed: ${error.message}`);
+  }
+});
+```
+
+Replace `https://yourdomain.com/api/v1/health` with your actual domain and health check endpoint.
+
+### 4\. Deploy Your Application
+
+Deploy your application to [Render.com](http://Render.com). Once deployed, the cron job will start running and periodically ping the health check endpoint, keeping your server awake.
+
+## Important Note
+
+I also got a helpful tip from a Render dev: *"This will work great since we give you 750 hours of usage per month (a month has about 745 hours), but this is per user account, not per service." which means "You can only have one project running the whole month."*
+
+### Success Story
+
+I implemented this solution for my own hobby projects hosted on [Render.com](http://Render.com). By setting up a health check route and scheduling regular pings, I managed to keep my servers awake and my projects readily accessible. You can check out my projects here:
+
+* [Portfolio](https://meeruzairwashere-portfolio.onrender.com).
+    
+
+This simple trick breathed new life into my project, making it instantly available for free. Try it out for your project and enjoy the uninterrupted uptime!
+
+---
+
+By following these steps, you can keep your [Render.com](http://Render.com) instances awake and ensure your projects remain accessible without the initial delay. Happy coding!
