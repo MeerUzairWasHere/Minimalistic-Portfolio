@@ -5,10 +5,8 @@ import { ChevronRightIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { ny } from '../lib/utils'
-import { Badge } from './ui/badge'
 import { Card, CardHeader } from './ui/card'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
-import { span } from 'framer-motion/client'
 
 interface ResumeCardProps {
    logoUrl: string
