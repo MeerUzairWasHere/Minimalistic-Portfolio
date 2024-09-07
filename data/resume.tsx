@@ -2,7 +2,7 @@ import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from 'lucide-react'
 import { Icons } from '../components/icons'
 
 export const DATA = {
-   name: 'Meer Uzair',
+   name: 'Mir Uzair',
    initials: 'MU',
    url: 'https://meeruzairwashere.online',
    location: 'India, Kashmir',
